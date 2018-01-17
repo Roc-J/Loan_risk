@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="sub_grade <= 7.5\ngini = 0.5\nsamples = 34881\nvalue = [17348, 17533]\nclass = safe", fillcolor="#399de503"] ;
+1 [label="total_rec_late_fee <= 9.0\ngini = 0.436\nsamples = 10295\nvalue = [3303, 6992]\nclass = safe", fillcolor="#399de587"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="grade <= 0.5\ngini = 0.425\nsamples = 9949\nvalue = [3042, 6907]\nclass = safe", fillcolor="#399de58f"] ;
+1 -> 2 ;
+3 [label="gini = 0.352\nsamples = 4621\nvalue = [1055, 3566]\nclass = safe", fillcolor="#399de5b4"] ;
+2 -> 3 ;
+4 [label="gini = 0.468\nsamples = 5328\nvalue = [1987, 3341]\nclass = safe", fillcolor="#399de567"] ;
+2 -> 4 ;
+5 [label="purpose <= 1.5\ngini = 0.371\nsamples = 346\nvalue = [261, 85]\nclass = not safe", fillcolor="#e58139ac"] ;
+1 -> 5 ;
+6 [label="gini = 0.484\nsamples = 56\nvalue = [33, 23]\nclass = not safe", fillcolor="#e581394d"] ;
+5 -> 6 ;
+7 [label="gini = 0.336\nsamples = 290\nvalue = [228, 62]\nclass = not safe", fillcolor="#e58139ba"] ;
+5 -> 7 ;
+8 [label="sub_grade <= 15.5\ngini = 0.49\nsamples = 24586\nvalue = [14045, 10541]\nclass = not safe", fillcolor="#e5813940"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="total_rec_late_fee <= 0.5\ngini = 0.5\nsamples = 14430\nvalue = [7389, 7041]\nclass = not safe", fillcolor="#e581390c"] ;
+8 -> 9 ;
+10 [label="gini = 0.5\nsamples = 13759\nvalue = [6809, 6950]\nclass = safe", fillcolor="#399de505"] ;
+9 -> 10 ;
+11 [label="gini = 0.234\nsamples = 671\nvalue = [580, 91]\nclass = not safe", fillcolor="#e58139d7"] ;
+9 -> 11 ;
+12 [label="total_rec_late_fee <= 0.5\ngini = 0.452\nsamples = 10156\nvalue = [6656, 3500]\nclass = not safe", fillcolor="#e5813979"] ;
+8 -> 12 ;
+13 [label="gini = 0.46\nsamples = 9528\nvalue = [6106, 3422]\nclass = not safe", fillcolor="#e5813970"] ;
+12 -> 13 ;
+14 [label="gini = 0.218\nsamples = 628\nvalue = [550, 78]\nclass = not safe", fillcolor="#e58139db"] ;
+12 -> 14 ;
+}
